@@ -11,12 +11,44 @@
 
 <body id='mainbody'>
 
-<div class="grid-container" id='shopItem'>
+<div class="filterbar">
+
+		<div>
+				<select>
+					<option>Most Sold</option>						<option>Most Viewed</option>
+					<option>Fastest Delivery</option>
+				</select>
+		</div>
+
+				<div onclick='toggleUnderlinebtn(this)'>
+<span class="material-symbols-outlined">
+arrow_downward
+</span> Newest
+				</div>
+
+
+				<div onclick='toggleUnderlinebtn(this)'>
+<span class="material-symbols-outlined">
+arrow_upward
+</span> Price
+				</div>
+
+				<div onclick='toggleUnderlinebtn(this)'>
+<span class="material-symbols-outlined">
+arrow_downward
+</span> Price
+				</div>
+
 
 </div>
+
+<div class="grid-container" id='shopItem'></div>
 
 </body>
 
 <script src='script.js'></script>
+<script>
+loadAllItem();
+</script>
 
 </html>

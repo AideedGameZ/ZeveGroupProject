@@ -2,6 +2,8 @@
 
 *{
 	font-family: 'Poppins',arial;
+overflow-x: hidden;
+overflow-y: auto;
 }
 
 body{
@@ -166,7 +168,13 @@ transition: 0.5s;
 	padding: 10px;
 	background-color: white;
 	border-radius: 5px;
-	box-shadow: 3px 5px 5px rgba(0,0,0,0.5);
+	box-shadow: 3px 5px 5px rgba(0,0,0,0.3);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.grid-item div:hover{
+	box-shadow: 3px 5px 5px rgba(0,0,0,0.8);
 }
 
 
@@ -184,6 +192,147 @@ transition: 0.5s;
 	font-size: 15px;
 	color: #303030;
 	margin-left: 20px;
+}
+
+.filterbar{
+width:100%;
+display:grid;
+grid-template-columns: auto auto auto auto;
+padding: 15px;
+background-color: white;
+box-shadow: 3px 5px 5px rgba(0,0,0,0.3);
+align-items: center;
+}
+
+span{
+	overflow-y: hidden;
+}
+
+.filterbar div{
+	text-align: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+h5{
+	font-size: 13px;
+	margin:0px;
+	padding:0px;
+	color: gray;
+}
+
+.productdet{
+	width:100%;
+}
+
+.pricetag{
+	color: #009900;
+}
+
+.productdet img{
+	width:80%;
+	height:450px;
+}
+
+.productdet h2{
+	color: black;
+}
+
+.productdet span{
+	color: #009900;
+}
+
+.productdet p{
+	color: #bfbfbf !important;
+	font-size: 15px;
+}
+
+p ul li{
+	color: #dfdfdf;
+	font-size: 12px;
+}
+
+.two-side{
+	padding:10px;
+	display:flex;
+	width:96%;
+}
+
+.side{
+	width:50%;
+	height: fit-content;
+}
+
+.btn-green{
+	background-color: #009900;
+	color: white;
+	border-radius: 5px;
+	border: 0px;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 16px;
+	margin-left:20px;
+}
+
+.btn-red{
+	background-color: #993355;
+	color: white;
+	border-radius: 5px;
+	border: 0px;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 16px;
+	margin-left:20px;
+}
+
+.card{
+	padding:10px;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 3px 5px 5px rgba(0,0,0, 0.3);
+	margin-top: 10px;
+}
+
+.formflex{
+	width: 60%;
+	display: grid;
+	grid-template-columns: auto auto;
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+.formflex input,select{
+	width:70%;	
+	padding: 10px;
+	background-color: #efefef;
+	border: 0px;
+	border-radius: 10px;
+}
+
+.cartitem{
+	display: grid;
+	grid-template-columns: auto auto;
+	width:95%;
+	margin: 10px;
+	background-color: white;
+	box-shadow: 3px 5px 5px rgba(0,0,0, 0.3);
+	border-radius: 5px;
+}
+
+.cartitem img{
+	width:70px;
+	height:70px;
+	margin-right:20px;
+}
+
+.cartitem h3{
+	text-align: end; margin-right:10px;
+}
+
+.cart-container{
+	background-color: #dfdfdf;
+	height:90%;
+	margin-right:30px;
 }
 
 @keyframes openSideBar{

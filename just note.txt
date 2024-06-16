@@ -1,0 +1,1 @@
+- nnti select2, if no user in list, then display 'no user existing'

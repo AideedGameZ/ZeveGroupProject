@@ -41,19 +41,19 @@ menu
 		</div>
 
 		<ul>
-			<li onclick="gotoHref(this)" href="www.google.com"><span class="material-symbols-outlined">
+			<li onclick="gotoHref(this)" href="#"><span class="material-symbols-outlined">
 home
 </span> Home</li>
 
-<li onclick="gotoHref(this)" href="www.google.com"><span class="material-symbols-outlined">
+<li onclick="gotoHref(this)" href="products.html"><span class="material-symbols-outlined">
 styler
 </span> Products</li>
 
-<li onclick="gotoHref(this)" href="www.google.com"><span class="material-symbols-outlined">
+<li onclick="gotoHref(this)" href="cart.html"><span class="material-symbols-outlined">
 shopping_cart
 </span> View Cart</li>
 
-<li onclick="gotoHref(this)" href="www.google.com"><span class="material-symbols-outlined">
+<li onclick="gotoHref(this)" href="aboutus.html"><span class="material-symbols-outlined">
 question_mark
 </span> About Us</li>
 		</ul>
@@ -62,16 +62,32 @@ question_mark
 ` + mainbody.innerHTML;
 }
 
+function toggleUnderlinebtn(doc){
+	let myborder = doc.style.borderBottom;
+	
+	if(myborder.length < 1){
+		doc.style.borderBottom = '3px black solid';
+	}else{
+		doc.style.borderBottom = 'none';
+	}
+}
+
 
 
 //______________PRODUCT PAGE
 
-addItem('Brown Shoes', '30.00', 'Ahmad', '7.2');
-addItem('Brown Shoes', '30.00', 'Ahmad', '7.2');
-addItem('Brown Shoes', '30.00', 'Ahmad', '7.2');
-addItem('Brown Shoes', '30.00', 'Ahmad', '7.2');
-addItem('Brown Shoes', '30.00', 'Ahmad', '7.2');
-addItem('Brown Shoes', '30.00', 'Ahmad', '7.2');
+function loadAllItem(){
+	addItem('Brown Shoes', '30.00','Selangor', 'Ahmad', '7.2');
+	addItem('Brown Shoes', '30.00','Semenyih', 'Ahmad', '7.2');
+	addItem('Brown Shoes', '30.00','Kelang', 'Ahmad', '7.2');
+	addItem('Brown Shoes', '30.00','Arau', 'Ahmad', '7.2');
+	addItem('Brown Shoes', '30.00','Kelantan', 'Ahmad', '7.2');
+	addItem('Brown Shoes', '30.00','Nilai', 'Ahmad', '7.2');
+}
+
+function gotoPage(url){
+	window.location.href = url;
+}
 
 
 function addItem(name, price, place, owner, rating){
@@ -80,7 +96,7 @@ function addItem(name, price, place, owner, rating){
 	itemlist.innerHTML += 
 `
 
-  	<div class="grid-item">
+  	<div class="grid-item" onclick="gotoPage('product_details.html')">
 
 		<div>
 			<img src='assets/products/1.jpg' width='200'/>
@@ -107,5 +123,21 @@ star
 		</div>
 	</div>
 
+`;
+}
+
+function addCartItem(name,quantity){
+	let cartlist = document.getElementById('cartlist');
+
+	cartlist.innerHTML += 
+`
+
+				<div class="cartitem">
+					<div style="display:flex; align-items: center;">
+						<img src="assets/products/1.jpg"/>
+						<label>${name}</label>
+					</div>
+					<h3>x${quantity}</h3>
+				</div>
 `;
 }
