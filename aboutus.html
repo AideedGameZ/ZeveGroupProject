@@ -9,9 +9,39 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
+<style>
+.picflex{
+	display:flex;
+}
+
+.picflex img{
+	width:200px;
+	height:210px;
+	border-radius:100%;
+	margin-left:30px;
+	box-shadow: 3px 5px 5px rgba(0,0,0, 0.5);
+}
+
+@keyframes itemUp{
+	from{
+		transform: translateY(-10px);
+	}
+	to{
+		transform: translateY(0px);
+	}
+}
+</style>
+
 <body id='mainbody'>
 
 	<div class="card">
+
+		<div class="picflex">
+			<img src='assets/creator/1.jpeg'/>
+			<img src='assets/creator/2.jpeg'/>
+			<img src='assets/creator/3.jpeg'/>
+			<img src='assets/creator/4.jpeg'/>
+		</div>
 
 		<h1>Created by</h1>
 		<p>Aideed</p>
@@ -25,12 +55,11 @@
 
 <script src="script.js"></script>
 <script>
-addCartItem('AZ Shoes Exclusive',3);
-addCartItem('Black Shoes Mad Edition',5);
-addCartItem('White-Golden Shoes',6);
-addCartItem('AZ Shoes Exclusive PlusS',3);
-addCartItem('AZ Shoes Exclusive Plus Medium',5);
-addCartItem('RAZ Hipster Shoes',7);
+let picflex = document.getElementById('picflex');
+for(let i=0; i<picflex.children.length; i++){
+	let delay = parseFloat(i) * 0.5;
+	stayAnimation(picflex.children[i], delay, 'itemUp', 1); 
+}
 </script>
 
 </html>

@@ -189,6 +189,13 @@ align-items: center;
 		top: 50%;
 		heigth:0px;
 		left:0%;
+		transform: rotate(180deg);
+	}
+	20%{
+		top: 50%;
+		heigth:150px;
+		left:0%;
+		transform: rotate(0deg);
 	}
 	30%{
 		top: 30%;
@@ -249,7 +256,7 @@ align-items: center;
 	<div class="dot"></div>
 	<div class="overflay_slideshow" style='display:none;'>
 		<div>
-			<input type='text' class='searchbar' onfocus="focusSearchBar(this)" onblur="blurSearchBar(this)" placeholder='Search what you desire..'></input>
+			<input type='text' class='searchbar' onfocus="focusSearchBar(this)" placeholder='Search what you desire..'></input>
 			<ul id='searchlist'>
 				<li onclick="gotoPage('products.html','')">Shoes</li>
 				<li onclick="gotoPage('products.html','')">Shirt</li>
@@ -273,10 +280,6 @@ function focusSearchBar(inp){
 	searchlist.setAttribute('style','display:block;');
 }
 
-function blurSearchBar(inp){
-	let searchlist = document.getElementById('searchlist');
-	searchlist.setAttribute('style','display:none;');
-}
 
 </script>
 
