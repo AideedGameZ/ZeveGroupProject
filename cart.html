@@ -28,12 +28,12 @@
 			</div>
 
 			<div class="side" style='width:30%;'>
-				<h2>Total Quantity : 29</h2>
-				<h2>Total Price : <span class="pricetag">RM 300.00</span></h2>
+				<h2 id="totalpricetag">Total Quantity : 29</h2>
+				<h2>Total Price : <span class="pricetag" id="pricetag">RM 300.00</span></h2>
 
 				<div class="formflex" style="position:absolute; bottom:70px; width:30%;">
-					<button class="btn-red">Empty Cart</button>
-					<button class="btn-green">Purchase</button>
+					<button class="btn-red" onclick="emptyCart()">Empty Cart</button>
+					<button class="btn-green" onclick="gotoPage('paymentform.html','')">Purchase</button>
 				</div>
 			</div>
 		</div>
@@ -44,12 +44,7 @@
 
 <script src="script.js"></script>
 <script>
-addCartItem('AZ Shoes Exclusive',3);
-addCartItem('Black Shoes Mad Edition',5);
-addCartItem('White-Golden Shoes',6);
-addCartItem('AZ Shoes Exclusive PlusS',3);
-addCartItem('AZ Shoes Exclusive Plus Medium',5);
-addCartItem('RAZ Hipster Shoes',7);
+loadAllCart();
 </script>
 
 </html>

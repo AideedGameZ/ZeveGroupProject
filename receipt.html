@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<title>Zeve</title>
+	<link rel="stylesheet" href='style.css'>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body id='mainbody'>
+
+	<div class="card">
+
+		<h1>You have successfully purchased the item!</h1>
+		<table border="2">
+			<thead>
+				<th>Bil</th>
+				<th>Item Name</th>
+				<th>Quantity</th>
+				<th>Price</th>
+			</thead>
+			<tbody id='receiptlist'>
+				<tr>
+					<td>1</td>
+					<td>Shoes Zeve</td>
+					<td>3</td>
+					<td>RM300 x 3 = RM900</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Black White Torso</td>
+					<td>5</td>
+					<td>RM100 x 5 = RM500</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Diamond Watches</td>
+					<td>3</td>
+					<td>RM1500 x 3 = RM3000</td>
+				</tr>
+			</tbody>
+		</table>
+		<br/>
+		<h1>Total : RM4,400.00</h1>
+
+		<button class="btn-green" onclick="gotoPage('products.html','')">Back To HomePage</button>
+		<button class="btn-green" onclick="window.print();">Print</button>
+	</div>
+
+
+</body>
+
+<script src="script.js"></script>
+<script>
+loadAllReceipt();
+</script>
+
+</html>

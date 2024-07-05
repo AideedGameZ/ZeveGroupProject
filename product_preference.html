@@ -15,11 +15,11 @@
 		<div class="two-side">
 			<div class="side productdet">
 				<center>
-					<img src="assets/products/1.jpg">
+					<img src="assets/products/1.jpg" id="prefimg">
 				</center>
 
 				<center>
-					<h2>AZ Shoes Exclusively in Zeve</h2>
+					<h2 id='preftxt'>AZ Shoes Exclusively in Zeve</h2>
 				</center>
 			</div>
 
@@ -50,18 +50,19 @@
 				</div>
 
 				<div>
-					<label>Stock : <p>30</p></label>
-					<label>Price : <p>RM60.00</p></label>
+					<label>Stock : 30</label>
+					<br/><br/>
+					<label id='prefprice'>Price : RM60.00</label>
 				</div>
 
 				<div class="formflex">
 					<label>Quantity: </label>
-					<input type="number" placeholder="Quantity" value='1'>
+					<input id='quantitytxt' type="number" placeholder="Quantity" value='1'>
 				</div>
 
 				<div class="formflex">
-					<button class="btn-red">Cancel</button>
-					<button class="btn-green">Confirm</button>
+					<button onclick="gotoPage('products.html','')" class="btn-red">Cancel</button>
+					<button onclick="buyNow()" class="btn-green">Confirm</button>
 				</div>
 
 
@@ -72,5 +73,8 @@
 </body>
 
 <script src="script.js"></script>
+<script>
+setupProductPreference();
+</script>
 
 </html>

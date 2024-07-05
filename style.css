@@ -97,6 +97,39 @@ align-items: center;
 	color: white;
 }
 
+.hamburger1{
+	width:40px;
+	height:10px;
+	border-top: 2px white solid;
+	border-bottom: 2px white solid;
+	background-color: #202020;
+	transform: rotate(0deg);
+	transition: 0.5s;
+}
+
+.hamburger2{
+	margin-top:10px;
+	width:40px;
+	position:relative;
+	border-top: 2px white solid;
+	background-color: #202020;
+	transform: rotate(0deg) translateY(0px) translateX(0px);
+	transition: 0.5s;
+}
+
+#testbtn:hover .hamburger1{
+	border-bottom:0px white solid;
+	transform: rotate(50deg) translate(10px,15px);
+}
+
+#testbtn:hover .hamburger2{
+	transform: rotate(135deg) translate(0px,12px);
+}
+
+#testbtn{
+	cursor: pointer;
+}
+
 #sidebar{
 	width:40%;
 	height:100%;
@@ -156,6 +189,9 @@ transition: 0.5s;
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
+}
+
+.grid-item:before{
 }
 .grid-item {
   padding: 20px;
@@ -272,6 +308,12 @@ p ul li{
 	padding: 10px;
 	font-size: 16px;
 	margin-left:20px;
+	transition: 0.5s;
+}
+
+.btn-green:hover{
+	background-color: black;
+	color: white;
 }
 
 .btn-red{
@@ -283,6 +325,12 @@ p ul li{
 	padding: 10px;
 	font-size: 16px;
 	margin-left:20px;
+	transition: 0.5s;
+}
+
+.btn-red:hover{
+	background-color: black;
+	color: white;
 }
 
 .card{
@@ -350,5 +398,34 @@ p ul li{
 	}
 	to{
 		transform: translateX(-100%);
+	}
+}
+
+@keyframes itemApeal{
+	from{
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes itemApealLeft{
+	from{
+		transform: translateX(-100%);
+	}
+	to{
+		transform: translateX(0%);
+	}
+}
+
+@keyframes itemApealRight{
+	from{
+		transform: translateX(100%);
+	}
+	to{
+		transform: translateX(0%);
 	}
 }

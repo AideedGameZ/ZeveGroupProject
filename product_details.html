@@ -14,34 +14,35 @@
 	<center><h1>Product Name</h1></center>
 	<div class="productdet">
 		<div class="two-side">
-			<div class="side" style='width:60%;'>
+			<div class="side" style='width:60%; animation:itemApealLeft 2s;'>
 				<center>
-					<img src="assets/products/1.jpg" />
+					<img src="assets/products/1.jpg" id="prodprev_img" />
 				</center>
 
 				<center>
 
 				<div class="card" style='width:80%;'>
-					<h3 class="pricetag" style='width:100%; text-align: start;'>Price Range: RM 20</h3>
+					<h3 class="pricetag" style='width:100%; text-align: start;' id='prodprev_price'>Price Range: RM 20</h3>
 					
 					<div style='width:100%; display:flex;'>
-						<button class="btn-red">Buy Now</button>
-						<button class="btn-green">Add To Cart</button>
+						<button onclick="gotoPreference();" class="btn-red">Buy Now</button>
+						<button class="btn-green" onclick="gotoPreference();">Add To Cart</button>
+
 					</div>
 				</div>
 
 				</center>
 			</div>
 			
-			<div class="side" style='width:40%;'>
+			<div class="side" style='width:40%; overflow-y: hidden !important;'>
 
 				<div class="card">
 					<h5>Title</h5>
-					<h2>AZ Shoes Exclusively in Zeve</h2>
+					<h2 id='prodprev_title'>AZ Shoes Exclusively in Zeve</h2>
 				</div>
 
 				<div class="card">
-					<h5>Description</h5>
+					<h5 id='prodprev_desc'>Description</h5>
 					<p>
 						Shoes products with the finest quality we can offer with the most masterpiece and outstanding materials. Apart from quality, we presents you the product which exclusively with Azeeq Autograph. Which we can mark up our price, but you would buy it anyway. We said it, but you're gonna buy it anyway.
 					</p>
@@ -78,5 +79,8 @@
 </body>
 
 <script src="script.js"></script>
+<script>
+setupProductDetails();
+</script>
 
 </html>
